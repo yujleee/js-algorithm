@@ -1,11 +1,6 @@
 function solution(my_string) {
-    const answer = my_string.split('').map((char) => {
-        if(char === char.toUpperCase()){
-            return char.toLowerCase();
-        } else{
-            return char.toUpperCase();
-        }
-    }).join('');
+    const answer = my_string.split('').map((char) => 
+        char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()).join('');
     
     return answer;
 }
