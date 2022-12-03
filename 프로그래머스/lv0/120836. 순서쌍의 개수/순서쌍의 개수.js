@@ -1,12 +1,11 @@
 function solution(n) {
     
-    let divisors = [];
+    let answer = [];
     
-    // 약수 찾기 절반값까지만 체크
-    for(let i=1; i<= n/2; i++){
-        if(n % i === 0) divisors.push(i);
+    for(let i=1; i<=n/2; i++){
+        if(n%i === 0) answer.push(i);
     }
-    divisors.push(n);
+    answer.push(n);
     
-    return divisors.length;
+    return answer.length;
 }
