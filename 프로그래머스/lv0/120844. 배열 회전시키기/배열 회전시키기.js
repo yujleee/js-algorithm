@@ -1,12 +1,5 @@
-function solution(numbers, direction) {
-    
-    if(direction === 'right'){
-        const n = numbers.pop();
-        numbers.unshift(n);
-    } else{
-        const n = numbers.shift();
-        numbers.push(n);
-    }
+function solution(numbers, direction) {    
+    direction === 'right' ? numbers.unshift(numbers.pop()) : numbers.push(numbers.shift());
     
     return numbers;
 }
