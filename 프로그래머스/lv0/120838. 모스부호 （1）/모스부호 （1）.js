@@ -5,7 +5,7 @@ function solution(letter) {
     '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
     '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
     '-.--':'y','--..':'z'
-    };
+};
     
-    return letter.split(' ').map((v) => morse[v]).join('');
+    return letter.split(' ').map((char) => morse[char]).join('');
 }
