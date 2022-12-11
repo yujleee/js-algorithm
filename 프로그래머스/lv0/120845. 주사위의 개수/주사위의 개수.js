@@ -1,9 +1,5 @@
 function solution(box, n) {
-    let answer = 1;
-    
-    box.forEach((len) => {
-     answer = Math.floor(len / n) * answer;   
-    });
-    
+    var answer = 1;
+    box.forEach((item) => answer *= Math.floor(item / n));
     return answer;
 }
