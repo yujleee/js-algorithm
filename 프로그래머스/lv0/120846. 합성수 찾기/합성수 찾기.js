@@ -1,21 +1,19 @@
 function solution(n) {
-    let answer = 0;
+    // 약수의 개수가 3개인지 확인하기
+    let answer = [];
     
-    // 약수의 개수 세기
-    function isMixNumber(num) {
-        let count = 1;
-        
-        for(let i = 1; i <= (num/2); i++){
-            num % i === 0 ? count++ : null;
+    function isCompositeNumber(num){
+        let count = 0;
+        for(let i=1; i<=num; i++){
+            if(num % i === 0) count++;
         }
-        
         return count >= 3 ? true : false;
-    
     }
     
-    for(let i=1; i<=n; i++){
-       isMixNumber(i) ? answer++ : 0;
+    for(let i=1; i<= n; i++){
+        isCompositeNumber(i) ? answer.push(i) : null;
     }
+        
+    return answer.length;
     
-    return answer;
 }
