@@ -1,10 +1,9 @@
 function solution(s) {
+    let nums = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     
-    const nums = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    for(let i=0; i<nums.length; i++){
+        s = s.replaceAll(nums[i], i);
+    }
     
-    nums.forEach((n, idx) => {
-        s = s.replaceAll(n, idx);
-    })
-    
-    return Number(s);
+    return +s;
 }
