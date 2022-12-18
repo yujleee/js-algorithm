@@ -1,8 +1,10 @@
 function solution(n) {
     var answer = '';
     
-    for(let i=0; i<n; i++){
-        answer += i % 2 === 0 ? '수' : '박';
+    let count = 0;
+    while(count < n){
+        answer += count % 2 === 0 ? '수' : '박';
+        count++;
     }
     
     return answer;
