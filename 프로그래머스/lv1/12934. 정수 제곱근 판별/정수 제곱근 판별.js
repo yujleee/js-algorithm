@@ -1,3 +1,4 @@
 function solution(n) {
-    return Number.isInteger(Math.sqrt(n)) >= 1 ? (Math.sqrt(n) + 1) ** 2 : -1;
+    var x = Math.sqrt(n);
+    return Number.isInteger(x) > 0 ? (x+1)**2 : -1;
 }
