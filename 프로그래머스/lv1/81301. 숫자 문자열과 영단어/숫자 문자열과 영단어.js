@@ -5,5 +5,5 @@ function solution(s) {
         s = s.replaceAll(nums[i], i);
     }
     
-    return +s;
+    return Number(s);
 }
