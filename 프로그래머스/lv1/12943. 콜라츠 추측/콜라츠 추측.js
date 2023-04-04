@@ -1,15 +1,15 @@
 function solution(num) {
     let count = 0;
     
-    function collaz(n){
+    function collatz(n){
         if(n === 1) return 0;
         if(count >= 500) return -1;
         count++;
         
-        return n % 2 === 0 ? collaz(n/2) : collaz(n*3 + 1);
+        return n % 2 === 0 ? collatz(n/2) : collatz(n*3 + 1);
     }
     
-   collaz(num);
+   collatz(num);
     
     return count === 500 ? -1 : count;
 }
