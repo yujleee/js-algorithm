@@ -5,8 +5,8 @@ function solution(numbers) {
     let j=1;
     while(i < numbers.length){
         if(i !== j){
-           const num = numbers[i] + numbers[j];
-        answer.findIndex((value) => value === num) !== -1 ? j++ : answer.push(num); 
+           const n = numbers[i] + numbers[j];
+            answer.findIndex((value) => value === n) !== -1 ? j++ : answer.push(n); 
         } else {
             j++;
         }
